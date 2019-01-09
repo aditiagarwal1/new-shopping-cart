@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './App.scss';
-/*
+
 import Thumb from './Thumb';
+/*
 import { formatPrice } from './util';
 
 
