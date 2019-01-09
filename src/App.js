@@ -6,6 +6,9 @@ import { Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
+window.React = React;
+window.ReactDOM = ReactDOM;
+
 
  class ProductCategoryRow extends React.Component {
   render() {
