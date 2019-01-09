@@ -8,6 +8,10 @@ class Product extends Component {
     return (
       <div>
       <h1>hello</h1>
+      <img src={require(`./static/data/products/${this.props.product.sku}_1.jpg`)} />
+        <h1>{this.props.product.title}</h1>
+        <p>{`${this.props.product.price}`}</p>
+        <div>Add Item to cart</div>
       
 </div>
     )
@@ -18,7 +22,7 @@ class App extends Component {
   render() {
     return (
     <div className="App">
-<Product />
+<Product products = {data.products}/>
   </div>
 );
 }
