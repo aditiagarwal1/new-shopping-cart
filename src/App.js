@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
-export default function ProductListing(props) {
+function ProductListing(props) {
   return <div>
     {
       props.products.map( product => <ProductListItem product={product} />)
@@ -14,7 +14,7 @@ export default function ProductListing(props) {
   </div>
 }
 
-export default function ProductListItem(props) {
+function ProductListItem(props) {
   return <div>
     <h3>{ props.product.title }</h3>
     <img
@@ -26,7 +26,7 @@ export default function ProductListItem(props) {
   </div>
 }
 
-export default function App(props) {
+function App(props) {
     return
       <div className="App">
         <ProductListing products={data.products} />
