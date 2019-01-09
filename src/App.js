@@ -29,10 +29,10 @@ export default App;
 */
 
 
-class EntireApp extends Component {
+class App extends Component {
   render() {
     return (
-      <div className="EntireApp">
+      <div className="App">
       </div>
        );
   }
@@ -46,3 +46,5 @@ const Thumb = props => {
     </div>
   );
 };
+
+export default App;
