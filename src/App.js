@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import data from './static/data/products.json'
+import './static/data/products.json';
 
 class Product extends Component {
   render() {
