@@ -6,12 +6,45 @@ import { Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
+class ProductListItem extends Component {
+  render() {
+    const { productlistitem } = this.props;
+    return (
+      <div>
+      <h3>{ props.name }</h3>
+      <img
+        height={100}
+        title={ props.name }
+        src = {`./static/data/products/${props.sku}_1.jpg`}
+/>
+<div>${ props.price }</div>
+</div>
+ )
+}
+}
+
+class Product extends Component {
+  render() {
+    const { product } = this.props;
+    return (
+      <div>
+      {
+        props.products.map( product =>
+          <ProductListItem product={product} />)
+      }  
+      </div>
+     );
+  }
+}
+
 
 class App extends Component {
   render() {
+    const { app } = this.props;
     return (
       <div>
         <h1>Shopping Cart App</h1>
+        <Product products={data.products} />
       </div>
      );
   }
