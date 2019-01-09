@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import './static/data/products.json';
+import info from './static/data/products.json';
 
 class Product extends Component {
   render() {
     return (
       <div>
-        <img src={require(`./static/data/products/${this.props.product}_1.jpg`)} alt={'this.props.product.title'}/>
+        <img src={require(`../../static/data/products/${this.props.product}_1.jpg`)} alt={'this.props.product.title'}/>
         <h1>{this.props.product.title}</h1>
         <p>{`${this.props.product.price}`}</p>
         <div>Add Item to cart</div>
