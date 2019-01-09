@@ -5,6 +5,113 @@ import info from './static/data/products.json';
 import { Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
+
+
+ class ProductCategoryRow extends React.Component {
+  render() {
+    const category = this.props.category;
+    return (
+      <tr>
+        <th colSpan="2">
+          {category}
+        </th>
+      </tr>
+    );
+  }
+}
+
+class ProductRow extends React.Component {
+  render() {
+    const product = this.props.product;
+    const name = product.stocked ?
+      product.name :
+      <span style={{color: 'red'}}>
+        {product.name}
+      </span>;
+
+    return (
+      <tr>
+        <td>{name}</td>
+        <td>{product.price}</td>
+      </tr>
+    );
+  }
+}
+
+class ProductTable extends React.Component {
+  render() {
+    const rows = [];
+    let lastCategory = null;
+    
+    this.props.products.forEach((product) => {
+      if (product.category !== lastCategory) {
+        rows.push(
+          <ProductCategoryRow
+            category={product.category}
+            key={product.category} />
+        );
+      }
+      rows.push(
+        <ProductRow
+          product={product}
+          key={product.name} />
+      );
+      lastCategory = product.category;
+    });
+
+    return (
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
+    );
+  }
+}
+
+class SearchBar extends React.Component {
+  render() {
+    return (
+      <form>
+        <input type="text" placeholder="Search..." />
+        <p>
+          <input type="checkbox" />
+          {' '}
+          Only show products in stock
+        </p>
+      </form>
+    );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <SearchBar />
+        <ProductTable products={this.props.products} />
+      </div>
+    );
+  }
+}
+
+
+const PRODUCTS = [
+  {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+  {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+  {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+  {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+  {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+  {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+];
+
+export default App;
+
+/*
 class Product extends Component {
   render() {
     return (
@@ -29,50 +136,6 @@ class App extends Component {
 
 export default App;
 
-/*
-class MultProducts extends Component {
-  render() {
-    let cols = this.props.products.map((product) => <Product key={product.sku} product={product} />)
-    let rows = []
-    let temp = []
-    for (let i in cols) {
-      if (i % 4 === 0 && i != 0) {
-        rows.push(temp)
-        temp = []
-      }
-      temp.push([cols[i]])
-    }
-    for (let i in 4 - temp.length) {
-      temp.push(<Col md={2}></Col>)
-    }
-    rows.push(temp)
-
-    return (
-      <div className="prod">
-        <div>
-        {rows.map(row =>
-          <Row>
-            <Col md={2}></Col>
-            {row}
-          </Row>)
-        }
-        </div>
-      </div>
-    )
-  }
-}
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <MultProducts products={info.products} />
-      </div>
-    );
-  }
-}
-
-export default App;
 */
 
 /*
