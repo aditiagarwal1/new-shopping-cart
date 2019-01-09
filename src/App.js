@@ -7,7 +7,7 @@ class Product extends Component {
   render() {
     return (
       <div>
-        <img src={require(`./static/data/products/${this.props.product.sku}_1.jpg`)} alt="this.props.product.title"/>
+     /*   <img src={require(`./static/data/products/${this.props.product.sku}_1.jpg`)} alt="this.props.product.title"/> */
         <h1>{this.props.product.title}</h1>
         <p>{`${this.props.product.price}`}</p>
         <div>Add Item to cart</div>
