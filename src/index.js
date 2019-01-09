@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 //ReactDOM.render(<App />, document.getElementById('root'));
 
 ReactDOM.render(
-  <FilterableProductTable products={PRODUCTS} />,
+  <App products={PRODUCTS} />,
   document.getElementById('container')
 );
 
