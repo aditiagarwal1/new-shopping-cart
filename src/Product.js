@@ -69,15 +69,35 @@ export default Product;
 
 class Product extends Component {
   render() {
-    const item_name = this.props.id;
+    const product = props.product;
   
-return (
-  <div className = "shelf-item">
-   <p> hello </p>
-</div>
-)
-}
-}
+  return (
+    <div
+      className="shelf-item"
+      onClick={() => props.addProduct(product)}
+      data-sku={product.sku}
+    >
+      {product.isFreeShipping && (
+        <div className="shelf-stopper">Free shipping</div>
+      )}
+      <Thumb
+        classes="shelf-item__thumb"
+        src={require(`./static/products/${product.sku}_1.jpg`)}
+        alt={product.title}
+      />
+      <p className="shelf-item__title">{product.title}</p>
+      <div className="shelf-item__price">
+      </div>
+      <div className="shelf-item__buy-btn">Add to cart</div>
+    </div>
+  );
+};
+
+Product.propTypes = {
+  product: PropTypes.object.isRequired,
+  addProduct: PropTypes.func.isRequired
+};
+
 export default Product;
 
 /*
