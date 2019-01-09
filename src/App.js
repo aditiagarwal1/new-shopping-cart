@@ -86,6 +86,15 @@ class App extends Component {
 export default App;
 */
 
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+      </div>
+    );
+  }
+}
+
 class ProductCategoryRow extends React.Component {
   render() {
     const category = this.props.category;
