@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'react-bootstrap'
 import './App.scss';
-import data from './static/data/products/products.json'
+import data from './static/data/products.json'
 
 /*
 import Thumb from './Thumb';
