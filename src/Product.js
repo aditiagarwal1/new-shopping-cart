@@ -73,7 +73,6 @@ class Product extends Component {
   
 return (
   <div className = "shelf-item">
-/*  <img className = "shelf-item__thumb" src={require(`./static/data/products/${this.props.item.sku}_1.jpg`)} alt={this.props.item.title} /> */ 
   <p className="shelf-item__title">{this.props.item.title}</p>
  <div className="shelf-item__buy-btn">Add to cart</div>
 </div>
