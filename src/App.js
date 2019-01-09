@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-
+/*
 class App extends Component {
   render() {
     return (
@@ -26,3 +26,23 @@ class App extends Component {
 }
 
 export default App;
+*/
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+      </div>
+       );
+  }
+}
+      
+  
+const Thumb = props => {
+  return (
+    <div className={props.classes}>
+      <img src={props.src} alt={props.alt} title={props.title} />
+    </div>
+  );
+};
