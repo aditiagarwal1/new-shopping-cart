@@ -3,7 +3,65 @@ import logo from './logo.svg';
 import './App.scss';
 import info from './static/data/products.json';
 import { Button } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+class Product extends Component {
+  render() {
+    return (
+      <Col md={2} className="prod">
+        <img src={require(`./static/data/products/${this.props.product.sku}_1.jpg`)} />
+        <h1>{this.props.product.title}</h1>
+        <h1>{`${this.props.product.price}`}</h1>
+        <Button>Add Item to Cart</Button>
+      </Col>
+    )
+  }
+}
+class MultProducts extends Component {
+  render() {
+    let cols = this.props.products.map((product) => <Product key={product.sku} product={product} />)
+    let rows = []
+    let temp = []
+    for (let i in cols) {
+      if (i % 4 === 0 && i != 0) {
+        rows.push(temp)
+        temp = []
+      }
+      temp.push([cols[i]])
+    }
+    for (let i in 4 - temp.length) {
+      temp.push(<Col md={2}></Col>)
+    }
+    rows.push(temp)
 
+    return (
+      <div className="prod">
+        <div>
+        {rows.map(row =>
+          <Row>
+            <Col md={2}></Col>
+            {row}
+          </Row>)
+        }
+        </div>
+      </div>
+    )
+  }
+}
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <MultProducts products={info.products} />
+      </div>
+    );
+  }
+}
+
+export default App;
+
+/*
 class Product extends Component {
   render() {
     return (
@@ -28,6 +86,7 @@ class App extends Component {
 }
 
 export default App;
+*/
 
 /* import Product from './Product';
 import './product.js'; */
