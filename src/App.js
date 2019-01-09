@@ -2,17 +2,13 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import info from './static/data/products.json';
+import { Button } from 'react-bootstrap';
 
 class Product extends Component {
   render() {
     return (
       <div>
-      <h1>hello</h1>
-      <img src={require(`./static/data/products/${this.props.product.sku}_1.jpg`)} />
-        <h1>{this.props.product.title}</h1>
-        <p>{`${this.props.product.price}`}</p>
-        <div>Add Item to cart</div>
-      
+        <Button>Add Item to cart</Button>
 </div>
     )
   }
@@ -22,7 +18,7 @@ class App extends Component {
   render() {
     return (
     <div className="App">
-<Product products = {info.products}/>
+<Product />
   </div>
 );
 }
