@@ -109,6 +109,11 @@ const PRODUCTS = [
   {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
 ];
 
+ReactDOM.render(
+  <App products={PRODUCTS} />,
+  document.getElementById('container')
+);
+
 export default App;
 
 /*
