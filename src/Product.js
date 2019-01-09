@@ -93,10 +93,6 @@ class Product extends Component {
   );
 };
 
-Product.propTypes = {
-  product: PropTypes.object.isRequired,
-  addProduct: PropTypes.func.isRequired
-};
 
 export default Product;
 
