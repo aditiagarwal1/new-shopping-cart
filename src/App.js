@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Shelf from './Shelf';
 import './App.scss';
 /* import './product.js'; */
 /*
@@ -51,6 +52,7 @@ const Thumb = props => {
 export default App;
 */
 
+/*
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
@@ -63,6 +65,21 @@ function App() {
       <Welcome name="Edite" />
     </div>
   );
+}
+
+export default App;
+*/
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <main>
+          <Shelf />
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;
