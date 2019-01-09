@@ -17,6 +17,17 @@ class Product extends Component {
     )
   }
 }
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <MultProducts products={info.products} />
+      </div>
+    );
+  }
+}
+
+export default App;
 
 /*
 class MultProducts extends Component {
