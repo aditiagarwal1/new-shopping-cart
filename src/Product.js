@@ -68,7 +68,7 @@ export default Product;
 */
 
 export class Product extends Component {
-  render()
+  render() {
   
 return (
     <div
@@ -96,3 +96,5 @@ return (
       <div className="shelf-item__buy-btn">Add to cart</div>
     </div>
   );
+}
+}
