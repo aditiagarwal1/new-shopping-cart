@@ -16,23 +16,21 @@ export default function ProductListing(props) {
 
 export default function ProductListItem(props) {
   return <div>
-    <h3>{ props.title }</h3>
+    <h3>{ props.product.title }</h3>
     <img
         height={100}
-        title={ props.title }
-        src = {`/static/data/products/${product.sku}_1.jpg`}
+        title={ props.product.title }
+        src = {`/static/data/products/${props.product.sku}_1.jpg`}
 />
 <div>${ props.price }</div>
   </div>
+}
 
-class App extends Component {
-  render() {
-    return (
+export default function App(props) {
+    return
       <div className="App">
         <ProductListing products={data.products} />
       </div>
-    );
-  }
 }
 
 export default App;
