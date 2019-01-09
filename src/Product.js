@@ -73,8 +73,7 @@ class Product extends Component {
   
 return (
   <div className = "shelf-item">
-  <p className="shelf-item__title">{this.props.item.title}</p>
- <div className="shelf-item__buy-btn">Add to cart</div>
+   <p> hello </p>
 </div>
 )
 }
