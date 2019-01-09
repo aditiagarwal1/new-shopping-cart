@@ -35,9 +35,13 @@ function HomePage(props) {
 }
 
 class App extends Component {
+  constructor(props) {
+  super(props);
+}
   render() {
     return (
       <div>
+        <ProductListing products={data.products} />
       </div>
     );
   }
