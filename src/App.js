@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     return (
     <div className="App">
-<Product products = {data.products}/>
+<Product products = {info.products}/>
   </div>
 );
 }
