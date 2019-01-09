@@ -71,6 +71,15 @@ class Product extends Component {
   render() {
   
 return (
+  <div className = "shelf-item__thumb" src={require(`./static/data/products/${product.sku}_1.jpg`)} alt={product.title} /> 
+  <p className="shelf-item__title">{product.title}</p>
+ <div className="shelf-item__buy-btn">Add to cart</div>
+)
+}
+}
+export default Product;
+
+/*
     <div
       className="shelf-item"
       onClick={() => props.addProduct(product)}
@@ -100,3 +109,4 @@ return (
 }
 
 export default Product;
+*/
