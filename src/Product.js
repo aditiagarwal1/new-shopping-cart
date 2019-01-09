@@ -33,9 +33,9 @@ class Product extends Component {
     return (
       <div>
         <img src={require(`./static/data/products/${this.props.product.sku}_1.jpg`)} alt="this.props.product.title"/>
-        <p> {this.props.product.title} </p>
-        <p> {`${this.props.product.price}`} </p>
-        <Button> Add Item to cart </Button>
+        <h1>{this.props.product.title}</h1>
+        <p>{`${this.props.product.price}`}</p>
+        <Button>Add Item to cart</Button>
 </div>
     )
   }
