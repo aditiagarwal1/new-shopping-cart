@@ -67,7 +67,7 @@ Product.propTypes = {
 export default Product;
 */
 
-export class Product extends Component {
+class Product extends Component {
   render() {
   
 return (
@@ -98,3 +98,5 @@ return (
   );
 }
 }
+
+export default Product;
