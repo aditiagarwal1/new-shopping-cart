@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MultProducts products={info.products} />
+        <Product products={info.products} />
       </div>
     );
   }
