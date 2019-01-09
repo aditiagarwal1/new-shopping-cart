@@ -8,7 +8,7 @@ import { Row } from 'react-bootstrap';
 
 class ProductListItem extends Component {
   render() {
-    const { productlistitem } = this.props;
+
     return (
       <div>
       <h3>{ props.name }</h3>
@@ -25,7 +25,7 @@ class ProductListItem extends Component {
 
 class Product extends Component {
   render() {
-    const { product } = this.props;
+
     return (
       <div>
       {
@@ -40,7 +40,7 @@ class Product extends Component {
 
 class App extends Component {
   render() {
-    const { app } = this.props;
+
     return (
       <div>
         <h1>Shopping Cart App</h1>
