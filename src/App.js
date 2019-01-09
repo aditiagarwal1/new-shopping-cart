@@ -17,6 +17,8 @@ class Product extends Component {
     )
   }
 }
+
+/*
 class MultProducts extends Component {
   render() {
     let cols = this.props.products.map((product) => <Product key={product.sku} product={product} />)
@@ -60,6 +62,7 @@ class App extends Component {
 }
 
 export default App;
+*/
 
 /*
 class Product extends Component {
