@@ -29,10 +29,10 @@ export default App;
 */
 
 
-class App extends Component {
+class EntireApp extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="EntireApp">
       </div>
        );
   }
