@@ -1,8 +1,39 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import Product from './Product';
-/* import './product.js'; */
+
+
+import React, { Component } from 'react';
+import './App.scss';
+import data from './static/data/products.json'
+
+class Product extends Component {
+  render() {
+    return (
+      <div>
+        <img src={require(`./static/data/products/${this.props.product.sku}_1.jpg`)} alt="this.props.product.title"/>
+        <h1>{this.props.product.title}</h1>
+        <p>{`${this.props.product.price}`}</p>
+        <div>Add Item to cart</div>
+</div>
+    )
+  }
+}
+
+class App extends Component {
+  render() {
+    return (
+    <div className="App">
+<Product />
+  </div>
+);
+}
+}
+
+export default App;
+
+/* import Product from './Product';
+import './product.js'; */
 /*
 class App extends Component {
   render() {
@@ -70,7 +101,7 @@ function App() {
 export default App;
 */
 
-
+/*
 class App extends Component {
   render() {
     return (
@@ -83,5 +114,5 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App;*/
 
