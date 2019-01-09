@@ -4,10 +4,8 @@ import './App.scss';
 
 import Thumb from './Thumb';
 
-
-class Product extends Component {
-  render() {
-    const product = props.product;
+const Product = props => {
+  const product = props.product;
   
   return (
     <div
@@ -29,7 +27,6 @@ class Product extends Component {
       <div className="shelf-item__buy-btn">Add to cart</div>
     </div>
   );
-}
 }
 
 
