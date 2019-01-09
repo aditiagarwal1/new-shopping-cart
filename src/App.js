@@ -6,6 +6,20 @@ import { Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Shopping Cart App</h1>
+      </div>
+     );
+  }
+}
+
+export default App;
+
+/*
 const Thumb = props => {
   return (
     <div className={props.classes}>
@@ -45,7 +59,7 @@ class App extends Component {
 
 export default App;
 
-
+*/
 
 
 
