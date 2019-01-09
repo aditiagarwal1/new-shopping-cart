@@ -28,7 +28,7 @@ function ProductListItem(props) {
 
 function App(props) {
     return
-      <div className="App">
+      <div>
         <ProductListing products={data.products} />
       </div>
 }
