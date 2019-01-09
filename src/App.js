@@ -68,6 +68,7 @@ class ProductCategoryRow extends React.Component {
           {category}
         </th>
       </tr>
+      <a> hello </a>
     );
   }
 }
