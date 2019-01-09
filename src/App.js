@@ -7,12 +7,6 @@ class Product extends Component {
   render() {
     return (
       <div>
-     /*  
-        <h1>{this.props.product.title}</h1>
-        <p>{`${this.props.product.price}`}</p>
-        <div>Add Item to cart</div>
-        */
-      
       <h1>hello</h1>
       
 </div>
