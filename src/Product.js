@@ -9,7 +9,7 @@ import { formatPrice } from './util';
 const Product = props => {
   const product = props.product;
 
-  product.quantity = 1;
+/*  product.quantity = 1; */
 
   let formattedPrice = formatPrice(product.price, product.currencyId); 
 
