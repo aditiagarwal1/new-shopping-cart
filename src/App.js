@@ -38,8 +38,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Homepage</h1>
-        <Product products={info.products} />
       </div>
     );
   }
@@ -111,7 +109,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Product products={info.products} />
+        <Product 
       </div>
     );
   }
