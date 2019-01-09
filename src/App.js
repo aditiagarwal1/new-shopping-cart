@@ -1,64 +1,43 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import jsonData from './static/data/products.json';
+import data from './static/data/products.json';
 import { Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
-class ProductListItem extends Component {
-  render() {
-    constructor(props) {
-    super(props);
-    };
+export default function ProductListing(props) {
+  return <div>
+    {
+      props.products.map( product => <ProductListItem product={product} />)
+    }
+  </div>
+}
 
-    return (
-      <div>
-      <h3>{ props.name }</h3>
-      <img
+export default function ProductListItem(props) {
+  return <div>
+    <h3>{ props.title }</h3>
+    <img
         height={100}
-        title={ props.name }
-        src = {`./static/data/products/${props.sku}_1.jpg`}
+        title={ props.title }
+        src = {`/static/data/products/${product.sku}_1.jpg`}
 />
 <div>${ props.price }</div>
-</div>
- )
-}
-}
-
-class Product extends Component {
-  render() {
-    constructor(props) {
-    super(props);
-    };
-    
-    return (
-      <div>
-      {
-        props.products.map( product =>
-          <ProductListItem product={product} />)
-      }  
-      </div>
-     );
-  }
-}
-
+  </div>
 
 class App extends Component {
   render() {
-    constructor(props) {
-    super(props);
-    };
     return (
-      <div>
-        <h1>Shopping Cart App</h1>
-        <Product products={data.products} />
+      <div className="App">
+        <ProductListing products={data.products} />
       </div>
-     );
+    );
   }
 }
 
 export default App;
+
+  
 
 /*
 const Thumb = props => {
