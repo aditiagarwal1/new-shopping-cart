@@ -68,7 +68,6 @@ class ProductCategoryRow extends React.Component {
           {category}
         </th>
       </tr>
-      <a> hello </a>
     );
   }
 }
@@ -80,6 +79,7 @@ class ProductRow extends React.Component {
       product.name :
       <span style={{color: 'red'}}>
         {product.name}
+<b> hello </b>
       </span>;
 
     return (
