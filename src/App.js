@@ -7,11 +7,22 @@ import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
 
+class Product extends Component {
+  render() {
+    return (
+      <div>
+        <img src={require('./static/data/products/10412368723880252_1.jpg')} />
+        <Button>Add Item to Cart</Button>
+</div>
+    )
+  }
+}
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <img src={require('./static/data/products/10412368723880252_1.jpg')} />
+        <Product \>
       </div>
     );
   }
