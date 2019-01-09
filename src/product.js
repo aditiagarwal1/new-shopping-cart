@@ -5,7 +5,7 @@ class Product extends Component {
   render() {
     return (
       <div className="App-header">
-      <p> hello </p>
+      <p className = "test"> hello </p>
       </div>
        );
   }
