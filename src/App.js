@@ -8,6 +8,9 @@ import { Row } from 'react-bootstrap';
 
 class ProductListItem extends Component {
   render() {
+    constructor(props) {
+    super(props);
+    };
 
     return (
       <div>
@@ -25,7 +28,10 @@ class ProductListItem extends Component {
 
 class Product extends Component {
   render() {
-
+    constructor(props) {
+    super(props);
+    };
+    
     return (
       <div>
       {
@@ -40,7 +46,9 @@ class Product extends Component {
 
 class App extends Component {
   render() {
-
+    constructor(props) {
+    super(props);
+    };
     return (
       <div>
         <h1>Shopping Cart App</h1>
