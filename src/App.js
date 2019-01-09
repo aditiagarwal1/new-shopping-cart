@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-//import jsonData from './static/data/products.json';
+import jsonData from './static/data/products.json';
 import { Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
-var data = require('./static/data/products.json');
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-     console.log(data);
+        <img src={require(‘./static/data/products/10412368723880252_1.jpg’)} />
       </div>
     );
   }
