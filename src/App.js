@@ -26,11 +26,23 @@ function ProductListItem(props) {
   </div>
 }
 
-function App(props) {
+
+function HomePage(props) {
     return
       <div>
         <ProductListing products={data.products} />
       </div>
+}
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Homepage</h1>
+        <Product products={info.products} />
+      </div>
+    );
+  }
 }
 
 export default App;
@@ -69,7 +81,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Product products={jsonData.products} />
+        <Product products={info.products} />
       </div>
     );
   }
