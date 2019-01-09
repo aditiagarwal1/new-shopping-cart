@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <img src={require(‘./static/data/products/10412368723880252_1.jpg’)} />
+        <img src={require('./static/data/products/10412368723880252_1.jpg')} />
       </div>
     );
   }
