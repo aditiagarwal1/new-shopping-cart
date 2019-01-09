@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/*
+
 import Thumb from '../../Thumb';
 import { formatPrice } from '../../../services/util';
+*/
 
 const Product = props => {
   const product = props.product;
