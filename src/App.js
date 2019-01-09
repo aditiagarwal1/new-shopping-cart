@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Shelf from './Shelf';
+import Shelf from './shelf';
 import './App.scss';
 /* import './product.js'; */
 /*
