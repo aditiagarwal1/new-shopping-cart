@@ -31,10 +31,12 @@ export default Product;
 class Product extends Component {
   render() {
     return (
+      <div>
         <img src={require(`./static/data/products/${this.props.product.sku}_1.jpg`)} alt="this.props.product.title"/>
         <p> {this.props.product.title} </p>
         <p> {`${this.props.product.price}`} </p>
         <Button> Add Item to cart </Button>
+</div>
     )
   }
 }
