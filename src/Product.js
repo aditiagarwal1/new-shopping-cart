@@ -8,14 +8,7 @@ const Product = props => {
   const product = props.product;
   
   return (
-    <div
-      className="shelf-item"
-      onClick={() => props.addProduct(product)}
-      data-sku={product.sku}
-    >
-      {product.isFreeShipping && (
-        <div className="shelf-stopper">Free shipping</div>
-      )}
+    <div className ="product">
       <Thumb
         classes="shelf-item__thumb"
         src={require(`./static/data/products/${product.sku}_1.jpg`)}
