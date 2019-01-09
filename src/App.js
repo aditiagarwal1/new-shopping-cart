@@ -6,13 +6,28 @@ import { Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
+const Thumb = props => {
+  return (
+    <div className={props.classes}>
+      <img src={props.src} alt={props.alt} title={props.title} />
+    </div>
+  );
+};
+
 
 class Product extends Component {
   render() {
+    const { product } = this.props;
     return (
-      <div>
-        <img src={require('./static/data/products/10412368723880252_1.jpg')} />
-        <Button>Add Item to Cart</Button>
+    <div>
+      <Thumb
+        classes="shelf-item__thumb"
+        src={require(`./static/data/products/${product.sku}_1.jpg`)}
+        alt={product.title}
+      />
+      <p className="shelf-item__title">{product.title}</p>
+      <p className="shelf-item__price">{product.title}</p>
+      <Button>Add Item to Cart</Button>
 </div>
     )
   }
