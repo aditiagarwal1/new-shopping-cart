@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Shelf from './shelf';
 import './App.scss';
 import Product from './Product';
 /* import './product.js'; */
