@@ -2,14 +2,18 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+/*
 import { fetchProducts } from '../../services/shelf/actions';
 import { addProduct } from '../../services/cart/actions';
+*/
 
 import Product from './Product';
 import Filter from './Filter';
 import ShelfHeader from './ShelfHeader';
+/*
 import Clearfix from '../Clearfix';
 import Spinner from '../Spinner';
+*/
 
 import '../App.scss';
 
