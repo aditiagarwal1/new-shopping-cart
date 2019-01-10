@@ -6,15 +6,15 @@ import { Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
-function ProductListing(props) {
+function ProductShirt(props) {
   return <div className="prod">
     {
-     props.products.map( product => <ProductListItem product={product} />)
+     props.products.map( product => <ProductShirtOne product={product} />)
     }
   </div>
 }
 
-function ProductListItem(props) {
+function ProductShirtOne(props) {
   return <div className ="item">
     <img
 	height={300}
@@ -35,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="pg">
-        <ProductListing products={data.products} />
+        <ProductShirt products={data.products} />
       </div>
     );
   }
