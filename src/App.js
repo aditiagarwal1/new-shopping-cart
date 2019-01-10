@@ -26,15 +26,6 @@ function ProductListItem(props) {
   </div>
 }
 
-/*
-function HomePage(props) {
-    return
-      <div>
-        <ProductListing products={data.products} />
-      </div>
-}
-*/
-
 class App extends Component {
   constructor(props) {
   super(props);
