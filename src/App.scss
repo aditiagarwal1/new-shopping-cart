@@ -2,6 +2,40 @@
   clear: both;
 }
 
+.body {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.pg {
+  width: 790px;
+  margin:12px auto;
+}
+
+.prod {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.prod .item {
+  padding: 5px 5px;
+  width: 250px;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  width: 250px;
+  height: 50px;
+  font-size: 17px;
+  position: relative;
+}
+
 .float-cart {
   position: fixed;
   top: 0;

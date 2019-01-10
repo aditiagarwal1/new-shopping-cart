@@ -7,22 +7,24 @@ import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
 function ProductListing(props) {
-  return <div>
+  return <div className="prod">
     {
-      props.products.map( product => <ProductListItem product={product} />)
+     props.products.map( product => <ProductListItem product={product} />)
     }
   </div>
 }
 
 function ProductListItem(props) {
-  return <div>
-    <h3>{ props.product.title }</h3>
+  return <div className ="item">
     <img
-        height={100}
+	height={300}
+	width={200}
         title={ props.product.title }
-        src = {`/static/data/products/${props.product.sku}_1.jpg`}
+        src = {require(`./static/data/products/${props.product.sku}_1.jpg`)}
 />
-<div>${ props.price }</div>
+<p className="center">{props.product.title}</p>
+<div className="center">${props.product.price}</div>
+<Button className="button">Add to cart</Button>
   </div>
 }
 
@@ -32,7 +34,7 @@ class App extends Component {
 }
   render() {
     return (
-      <div>
+      <div className="pg">
         <ProductListing products={data.products} />
       </div>
     );
