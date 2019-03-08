@@ -32,6 +32,7 @@ class App extends Component {
   render() {
     return (
       <div className="pg">
+      <p> shopping cart </p>
         <ProductShirt products={data.products} />
       </div>
     );
